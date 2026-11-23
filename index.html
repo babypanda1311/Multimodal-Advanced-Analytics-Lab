@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Multimodal Advanced Analytics Lab | UTS</title>
+  <meta name="description" content="The Multimodal Advanced Analytics Lab at the University of Technology Sydney develops trustworthy multimodal AI for health, vision, language and society.">
+  <meta name="theme-color" content="#0b1f3a">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%230b1f3a'/%3E%3Ccircle cx='50' cy='50' r='12' fill='%23ff9f43'/%3E%3Cg stroke='%2327d3c3' stroke-width='5' stroke-linecap='round'%3E%3Cpath d='M50 50 20 25M50 50 80 25M50 50 20 75M50 50 80 75'/%3E%3C/g%3E%3C/svg%3E">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="nav" id="top">
+  <div class="wrap nav-in">
+    <a class="brand" href="#top" aria-label="Multimodal Advanced Analytics Lab - home">
+      <span class="logo" aria-hidden="true"></span><span class="brand-t">MAA&nbsp;Lab</span>
+    </a>
+    <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="menu">☰</button>
+    <nav id="menu" class="menu" aria-label="Primary">
+      <a href="#about">About</a>
+      <a href="#people">People</a>
+      <a href="#research">Research</a>
+      <a href="#publications">Publications</a>
+      <a href="#funding">Funding</a>
+      <a href="#students">Students</a>
+      <a href="#collaborators">Collaborators</a>
+      <a href="#service">Service</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <button class="mode" id="mode" aria-label="Toggle dark / light theme">◐</button>
+  </div>
+</header>
+
+<main id="main">
+  <!-- HERO -->
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="hero-bg" role="img" aria-label="Abstract illustration of images, audio, text, medical signals and satellite maps merging into a neural network"></div>
+    <div class="hero-shade"></div>
+    <div class="wrap hero-in">
+      <p class="eyebrow" id="h-aff"></p>
+      <h1 id="hero-title"><span id="h-name"></span></h1>
+      <p class="lead" id="h-tag"></p>
+      <div class="cta">
+        <a class="btn primary" href="#research">Explore our research</a>
+        <a class="btn ghost" href="#contact">Join / collaborate</a>
+      </div>
+      <ul class="stats" id="stats" aria-label="Lab at a glance"></ul>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="sec">
+    <div class="wrap two">
+      <div>
+        <h2>About the lab</h2>
+        <div id="about-t" class="prose"></div>
+      </div>
+      <aside class="card tint" aria-labelledby="impact-h">
+        <h3 id="impact-h">Impact in practice</h3>
+        <ul class="ticks" id="impact"></ul>
+      </aside>
+    </div>
+    <div class="wrap">
+      <h3 class="sub">Latest news</h3>
+      <ul class="news" id="news"></ul>
+    </div>
+  </section>
+
+  <!-- PEOPLE -->
+  <section id="people" class="sec alt">
+    <div class="wrap">
+      <h2>Leadership</h2>
+      <div class="people" id="people-grid"></div>
+    </div>
+  </section>
+
+  <!-- RESEARCH -->
+  <section id="research" class="sec">
+    <div class="wrap">
+      <h2>Research profile</h2>
+      <p class="muted">Technique-led, application-driven: our methods are developed with the problems of health, industry and society in mind.</p>
+      <div class="grid3" id="themes"></div>
+    </div>
+  </section>
+
+  <!-- PUBLICATIONS -->
+  <section id="publications" class="sec alt">
+    <div class="wrap">
+      <h2>Publications</h2>
+      <p class="muted" id="pub-note"></p>
+      <div class="toolbar" role="search">
+        <label class="sr" for="pub-q">Search publications</label>
+        <input id="pub-q" type="search" placeholder="Search title, author or venue…">
+        <div class="seg" id="pub-type" role="group" aria-label="Filter by type">
+          <button class="on" data-v="all">All</button>
+          <button data-v="journal">Journal</button>
+          <button data-v="conference">Conference</button>
+          <button data-v="book">Books</button>
+        </div>
+        <label class="sr" for="pub-year">Year</label>
+        <select id="pub-year"></select>
+      </div>
+      <p class="count" id="pub-count" aria-live="polite"></p>
+      <div id="pub-list" class="pubs"></div>
+      <div class="more"><button class="btn ghost" id="pub-more">Show more</button></div>
+      <p class="muted small" id="pub-links"></p>
+    </div>
+  </section>
+
+  <!-- FUNDING -->
+  <section id="funding" class="sec">
+    <div class="wrap">
+      <h2>Funded research</h2>
+      <div class="toolbar">
+        <label class="sr" for="fund-q">Search funded projects</label>
+        <input id="fund-q" type="search" placeholder="Search sponsor or project…">
+        <div class="seg" id="fund-st" role="group" aria-label="Filter by status">
+          <button class="on" data-v="all">All</button>
+          <button data-v="Active">Active</button>
+          <button data-v="Completed">Completed</button>
+        </div>
+      </div>
+      <div class="tbl-wrap">
+        <table class="tbl" id="fund-tbl">
+          <thead><tr><th>Years</th><th>Funder / partner</th><th>Project</th><th>Status</th></tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- STUDENTS -->
+  <section id="students" class="sec alt">
+    <div class="wrap">
+      <h2>PhD &amp; MRes researchers</h2>
+      <div class="seg center" id="stu-tab" role="tablist" aria-label="Student status">
+        <button class="on" data-v="current" role="tab" aria-selected="true">Current</button>
+        <button data-v="graduated" role="tab" aria-selected="false">Graduated</button>
+      </div>
+      <div class="grid3 stu" id="stu-grid"></div>
+    </div>
+  </section>
+
+  <!-- COLLABORATORS -->
+  <section id="collaborators" class="sec">
+    <div class="wrap">
+      <h2>Collaborators</h2>
+      <div class="two cols">
+        <div>
+          <h3 class="sub">Industry &amp; community partners</h3>
+          <div class="chips" id="c-ind"></div>
+          <h3 class="sub">Australian academic &amp; clinical partners</h3>
+          <div class="chips" id="c-au"></div>
+        </div>
+        <div>
+          <h3 class="sub">International academic partners</h3>
+          <div id="c-intl"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICE -->
+  <section id="service" class="sec alt">
+    <div class="wrap">
+      <h2>Awards, service &amp; leadership</h2>
+      <div class="grid3">
+        <article class="card"><h3>Awards &amp; recognition</h3><ul class="ticks" id="s-awards"></ul></article>
+        <article class="card"><h3>Conference leadership</h3><ul class="ticks" id="s-chair"></ul></article>
+        <article class="card"><h3>Editorial roles</h3><ul class="ticks" id="s-edit"></ul></article>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="sec">
+    <div class="wrap two">
+      <div>
+        <h2>Contact</h2>
+        <p class="prose" id="join"></p>
+        <p><a class="btn primary" id="mail" href="#">Email the Director</a></p>
+      </div>
+      <address class="card tint">
+        <h3>Find us</h3>
+        <p id="addr"></p>
+        <p><strong>Email:</strong> <a id="mail2" href="#"></a><br><strong>Phone:</strong> <span id="phone"></span></p>
+        <p class="links" id="c-links"></p>
+      </address>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="wrap foot-in">
+    <p>© <span id="yr"></span> Multimodal Advanced Analytics Lab, University of Technology Sydney.</p>
+    <p class="small">Hero visual generated with Microsoft Copilot. Site content is maintained in <code>assets/js/data.js</code>.</p>
+  </div>
+</footer>
+
+<button class="totop" id="totop" aria-label="Back to top">↑</button>
+
+<script src="assets/js/data.js"></script>
+<script src="assets/js/publications.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
